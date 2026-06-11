@@ -343,3 +343,86 @@ footer > .container:last-of-type {
         gap: 30px;
     }
 }
+
+/* Mobile Menu Styles */
+.mobile-menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-dark);
+    z-index: 1001;
+}
+
+@media (max-width: 992px) {
+    .header-actions {
+        margin-right: 15px;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+        position: relative;
+    }
+    
+    header nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+        background-color: black;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+        transition: right 0.4s ease;
+        padding: 100px 30px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header nav.active {
+        right: 0;
+    }
+    
+    header nav.active ~ .mobile-menu-btn {
+        color: white;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+    
+    header nav ul li a {
+        font-size: 18px;
+        color: white;
+    }
+    
+    /* Move badge for mobile */
+    .badge {
+        position: relative;
+        top: -2px;
+        right: -5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-actions .login-btn {
+        padding: 10px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+    }
+    .header-actions .login-btn i {
+        margin: 0;
+    }
+    /* The text node inside login btn is what we want to hide, but it's not wrapped in a span. 
+       Let's use font-size 0 to hide text and restore font-size for icon */
+    .header-actions .login-btn {
+        font-size: 0;
+    }
+    .header-actions .login-btn i {
+        font-size: 16px;
+    }
+}

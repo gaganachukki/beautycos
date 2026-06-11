@@ -433,6 +433,19 @@
     .banner-content h2 {
         font-size: 32px;
     }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-title .highlight {
+        font-size: 46px;
+    }
+    
+    .hero-desc {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
 }
 
 /* Testimonials Section */
