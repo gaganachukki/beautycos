@@ -60,7 +60,42 @@
 
     <!-- Main Content Area -->
     <main>
-        <!-- Add your page content here -->
+        <section class="cart-section">
+            <div class="container">
+                <h1 class="page-title" style="text-align: center; margin-bottom: 40px; font-family: var(--font-serif); font-size: 42px;">Your Shopping Cart</h1>
+                
+                <div class="cart-layout" id="cart-layout" style="display: none;">
+                    <div class="cart-items-list" id="cart-items-list">
+                        <!-- Items rendered here by JS -->
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal">₹0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span>Free</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total</span>
+                            <span id="cart-total">₹0.00</span>
+                        </div>
+                        <button class="checkout-btn" onclick="window.location.href='404.html'">Proceed to Checkout</button>
+                        <button class="buy-now-btn" onclick="window.location.href='404.html'">Buy Now with 1-Click</button>
+                    </div>
+                </div>
+
+                <div class="empty-cart-message" id="empty-cart-message">
+                    <i class="fa-solid fa-cart-arrow-down" style="font-size: 60px; color: #ddd; margin-bottom: 20px;"></i>
+                    <h2 style="font-family: var(--font-serif); margin-bottom: 10px;">Your cart is currently empty</h2>
+                    <p style="color: var(--text-gray); margin-bottom: 30px;">Looks like you haven't added any premium products to your cart yet.</p>
+                    <a href="shop.html" class="btn-primary" style="display: inline-block; padding: 12px 30px; background: var(--primary-color); color: white; border-radius: 25px; font-weight: 500;">Return to Shop</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -135,6 +170,7 @@
     </footer>
 
     <!-- JS script -->
+    <script src="js/cart.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
