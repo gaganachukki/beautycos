@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Beauty and Cosmetics Store</title>
+    <meta name="description" content="Discover premium cosmetics and skincare products for your natural glow at Stackly.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.webp" alt="Stackly Logo">
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <a href="shop.html">Shop</a>
+                        <span class="badge">New</span>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="login.html" class="login-btn">
+                    <i class="fa-regular fa-user"></i>
+                    Login
+                </a>
+                <a href="cart.html" class="cart-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-subtitle">DISCOVER YOUR BEAUTY</div>
+                <h2 class="hero-title">
+                    Enhance Your
+                    <span class="highlight">Natural Glow</span>
+                </h2>
+                <div class="hero-divider"></div>
+                <p class="hero-desc">
+                    Premium cosmetics and skincare products for every beauty, every day.
+                </p>
+                <a href="shop.html" class="shop-now-btn">
+                    Shop Now <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/hero-index.webp" alt="Premium Cosmetics Products">
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+                <p>Discover our range of premium beauty essentials</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="assets/cat-skincare.webp" alt="Skincare">
+                    <div class="category-info">
+                        <h3>Skincare</h3>
+                        <a href="shop.html" class="category-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="assets/cat-makeup.webp" alt="Makeup">
+                    <div class="category-info">
+                        <h3>Makeup</h3>
+                        <a href="shop.html" class="category-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="assets/cat-fragrance.webp" alt="Fragrance">
+                    <div class="category-info">
+                        <h3>Fragrance</h3>
+                        <a href="shop.html" class="category-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trending Now</h2>
+                <p>Our most loved products this week</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge">Hot</div>
+                    <div class="product-image">
+                        <img src="assets/product-01.webp" alt="Radiance Serum">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Wishlist" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-heart"></i></button>
+                            <button class="action-btn" title="Quick View" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Skincare</span>
+                        <h3 class="product-title">Radiance Glow Serum</h3>
+                        <div class="product-price">$45.00</div>
+                        <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/product-02.webp" alt="Velvet Matte Lipstick">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Wishlist" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-heart"></i></button>
+                            <button class="action-btn" title="Quick View" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Makeup</span>
+                        <h3 class="product-title">Velvet Matte Lipstick</h3>
+                        <div class="product-price">$28.00</div>
+                        <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-badge discount">-20%</div>
+                    <div class="product-image">
+                        <img src="assets/product-03.webp" alt="Hydrating Face Cream">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Wishlist" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-heart"></i></button>
+                            <button class="action-btn" title="Quick View" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Skincare</span>
+                        <h3 class="product-title">Hydrating Face Cream</h3>
+                        <div class="product-price"><span class="old-price">$55.00</span> $44.00</div>
+                        <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/product-04.webp" alt="Silk Foundation">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Wishlist" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-heart"></i></button>
+                            <button class="action-btn" title="Quick View" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Makeup</span>
+                        <h3 class="product-title">Flawless Silk Foundation</h3>
+                        <div class="product-price">$42.00</div>
+                        <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Beauty Banner -->
+    <section class="banner-section">
+        <div class="container">
+            <div class="banner-content">
+                <h2>Our Clean Beauty Promise</h2>
+                <p>100% Cruelty-Free, Vegan, and formulated without parabens or sulfates. Because your skin deserves the best of nature.</p>
+                <a href="shop.html" class="banner-btn">Read Our Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from real beauty enthusiasts</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Stackly has completely transformed my skincare routine! The products are so effective and the customer service is outstanding. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <img src="assets/hero.webp" alt="Customer">
+                        <div>
+                            <h4>Priya Sharma</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Love the quality and variety of products. The makeup collection is incredible, and I appreciate that everything is cruelty-free. Worth every rupee!"</p>
+                    <div class="testimonial-author">
+                        <img src="assets/hero.webp" alt="Customer">
+                        <div>
+                            <h4>Ananya Verma</h4>
+                            <p>Regular Customer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The virtual consultation I had was amazing! The expert gave personalized recommendations and my skin has never felt better. Thank you, Stackly!"</p>
+                    <div class="testimonial-author">
+                        <img src="assets/hero.webp" alt="Customer">
+                        <div>
+                            <h4>Divya Patel</h4>
+                            <p>Consultation Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Stackly?</h2>
+                <p>Reasons to make us your beauty destination</p>
+            </div>
+
+            <div class="why-choose-grid">
+                <div class="why-choose-card">
+                    <div class="card-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Quality Assured</h3>
+                    <p>All products undergo rigorous testing to ensure the highest quality standards and efficacy.</p>
+                </div>
+
+                <div class="why-choose-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Same-day dispatch available. Free shipping on orders above ₹999 across India.</p>
+                </div>
+
+                <div class="why-choose-card">
+                    <div class="card-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day hassle-free return policy on all products. No questions asked if unsatisfied.</p>
+                </div>
+
+                <div class="why-choose-card">
+                    <div class="card-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Expert Support</h3>
+                    <p>24/7 customer support team ready to help with product recommendations and queries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="special-offers">
+        <div class="container">
+            <div class="offer-card">
+                <div class="offer-content">
+                    <h3>Summer Sale</h3>
+                    <p>Get up to 40% OFF on selected items</p>
+                    <a href="shop.html" class="offer-btn">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="offer-card secondary">
+                <div class="offer-content">
+                    <h3>New Arrivals</h3>
+                    <p>Discover latest beauty trends and exclusive launches</p>
+                    <a href="shop.html" class="offer-btn">Explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get exclusive deals, beauty tips, and new product launches delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" onclick="window.location.href='404.html'; return false;">Subscribe</button>
+                </form>
+                <p class="privacy-note">We respect your privacy. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <div class="footer-about-logo">
+                    <img src="assets/logo.webp" alt="Stackly Logo">
+                </div>
+                <p>Discover your natural glow with our premium collection of cosmetics and skincare products, designed for every beauty.</p>
+                <div class="footer-socials">
+                    <a href="404.html" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404.html" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="404.html" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404.html" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="shop.html">Shop Collection</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="shop.html">Skincare</a></li>
+                    <li><a href="shop.html">Makeup</a></li>
+                    <li><a href="shop.html">Fragrance</a></li>
+                    <li><a href="shop.html">Bath & Body</a></li>
+                    <li><a href="shop.html">Gift Sets</a></li>
+                </ul>
+            </div>
+
+            <!-- Get in Touch Section -->
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Salem, Tamil Nadu</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 2345678901</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@stackly.com</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="container">
+            <div class="footer-copyright">
+                <span>&copy; 2026 Stackly. All rights reserved.</span>
+                <div>
+                    <a href="404.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

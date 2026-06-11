@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Stackly</title>
+    <meta name="description" content="Browse our collection of premium beauty and cosmetics products at Stackly.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.webp" alt="Stackly Logo">
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <a href="shop.html" class="active">Shop</a>
+                        <span class="badge">New</span>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="login.html" class="login-btn">
+                    <i class="fa-regular fa-user"></i>
+                    Login
+                </a>
+                <a href="cart.html" class="cart-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Shop Hero Section -->
+        <section class="shop-hero">
+            <div class="container">
+                <div class="shop-hero-content">
+                    <h1>Our Premium Collection</h1>
+                    <p>Discover our curated selection of beauty and cosmetics products</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="shop-filters">
+            <div class="container">
+                <div class="filters-wrapper">
+                    <div class="filter-group">
+                        <h4>Product Category</h4>
+                        <label><input type="checkbox"> Face Makeup (24)</label>
+                        <label><input type="checkbox"> Skincare (18)</label>
+                        <label><input type="checkbox"> Eye Makeup (16)</label>
+                        <label><input type="checkbox"> Lip Products (12)</label>
+                        <label><input type="checkbox"> Hair Care (14)</label>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <label><input type="checkbox"> Under ₹500</label>
+                        <label><input type="checkbox"> ₹500 - ₹1000</label>
+                        <label><input type="checkbox"> ₹1000 - ₹2000</label>
+                        <label><input type="checkbox"> Above ₹2000</label>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Rating</h4>
+                        <label><input type="checkbox"> 5 Stars (89)</label>
+                        <label><input type="checkbox"> 4+ Stars (156)</label>
+                        <label><input type="checkbox"> 3+ Stars (234)</label>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid">
+                                        <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-01.webp" alt="Laneige Glowy Serum & Balm Set">
+                            <span class="product-badge">Bestseller</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Laneige Glowy Serum & Balm Set</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(115 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹550</span>
+                                <span class="original-price">₹850</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-02.webp" alt="Professional Makeup Brush Set">
+                        </div>
+                        <div class="product-info">
+                            <h3>Professional Makeup Brush Set</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(130 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹600</span>
+                                <span class="original-price">₹900</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-03.webp" alt="Lavender Calming Skincare Collection">
+                        </div>
+                        <div class="product-info">
+                            <h3>Lavender Calming Skincare Collection</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(145 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹650</span>
+                                <span class="original-price">₹950</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-04.webp" alt="Botanical White & Gold Skincare Set">
+                        </div>
+                        <div class="product-info">
+                            <h3>Botanical White & Gold Skincare Set</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(160 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹700</span>
+                                <span class="original-price">₹1000</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-05.webp" alt="Laneige Glowy Makeup Serum Duo">
+                            <span class="product-badge">Hot</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Laneige Glowy Makeup Serum Duo</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(175 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹750</span>
+                                <span class="original-price">₹1050</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-06.webp" alt="Monat Complete Skincare Routine">
+                        </div>
+                        <div class="product-info">
+                            <h3>Monat Complete Skincare Routine</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(190 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹800</span>
+                                <span class="original-price">₹1100</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-07.webp" alt="Botanical Skincare Essentials">
+                        </div>
+                        <div class="product-info">
+                            <h3>Botanical Skincare Essentials</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(205 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹850</span>
+                                <span class="original-price">₹1150</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-08.webp" alt="Hydrating Aqua Skincare Bundle">
+                        </div>
+                        <div class="product-info">
+                            <h3>Hydrating Aqua Skincare Bundle</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(220 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹900</span>
+                                <span class="original-price">₹1200</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-09.webp" alt="Aqua Marine Hydration Set">
+                        </div>
+                        <div class="product-info">
+                            <h3>Aqua Marine Hydration Set</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(235 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹950</span>
+                                <span class="original-price">₹1250</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-10.webp" alt="Luxury Makeup Palette Collection">
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Luxury Makeup Palette Collection</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(250 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹1000</span>
+                                <span class="original-price">₹1300</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-11.webp" alt="Rosewater Skincare Essentials">
+                        </div>
+                        <div class="product-info">
+                            <h3>Rosewater Skincare Essentials</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(265 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹1050</span>
+                                <span class="original-price">₹1350</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-12.webp" alt="Lavender Blackberry Skincare Kit">
+                        </div>
+                        <div class="product-info">
+                            <h3>Lavender Blackberry Skincare Kit</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(280 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹1100</span>
+                                <span class="original-price">₹1400</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-13.webp" alt="Magnolia Floral Skincare Collection">
+                        </div>
+                        <div class="product-info">
+                            <h3>Magnolia Floral Skincare Collection</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(295 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹1150</span>
+                                <span class="original-price">₹1450</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-14.webp" alt="Advanced Snail & Ordinary Serums">
+                        </div>
+                        <div class="product-info">
+                            <h3>Advanced Snail & Ordinary Serums</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(310 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹1200</span>
+                                <span class="original-price">₹1500</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-15.webp" alt="Ageless Firming Skincare Set">
+                        </div>
+                        <div class="product-info">
+                            <h3>Ageless Firming Skincare Set</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(325 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹1250</span>
+                                <span class="original-price">₹1550</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-16.webp" alt="Matkas Hyaluronic Acid Firming Serum">
+                        </div>
+                        <div class="product-info">
+                            <h3>Matkas Hyaluronic Acid Firming Serum</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(340 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹1300</span>
+                                <span class="original-price">₹1600</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-17.webp" alt="Yawoni All Purpose Nourishing Oil">
+                        </div>
+                        <div class="product-info">
+                            <h3>Yawoni All Purpose Nourishing Oil</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(355 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹1350</span>
+                                <span class="original-price">₹1650</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-18.webp" alt="Hydrating Face Cream Application">
+                        </div>
+                        <div class="product-info">
+                            <h3>Hydrating Face Cream Application</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(370 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹1400</span>
+                                <span class="original-price">₹1700</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-19.webp" alt="Shine Bright Vitamin C Cream">
+                        </div>
+                        <div class="product-info">
+                            <h3>Shine Bright Vitamin C Cream</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(385 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹1450</span>
+                                <span class="original-price">₹1750</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-20.webp" alt="Henua Energizing Body Lotion">
+                        </div>
+                        <div class="product-info">
+                            <h3>Henua Energizing Body Lotion</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(400 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹1500</span>
+                                <span class="original-price">₹1800</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/product-21.webp" alt="Charlotte Tilbury Glow Skincare Set">
+                        </div>
+                        <div class="product-info">
+                            <h3>Charlotte Tilbury Glow Skincare Set</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(415 reviews)</span>
+                            </div>
+                            <p>Discover your natural glow with this amazing premium beauty product.</p>
+                            <div class="product-price">
+                                <span class="price">₹1550</span>
+                                <span class="original-price">₹1850</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Load More Section -->
+        <section class="load-more-section">
+            <div class="container">
+                <button class="load-more-btn" onclick="window.location.href='404.html'; return false;">Load More Products</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <div class="footer-about-logo">
+                    <img src="assets/logo.webp" alt="Stackly Logo">
+                </div>
+                <p>Discover your natural glow with our premium collection of cosmetics and skincare products, designed for every beauty.</p>
+                <div class="footer-socials">
+                    <a href="404.html" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404.html" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="404.html" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404.html" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="shop.html">Shop Collection</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="shop.html">Skincare</a></li>
+                    <li><a href="shop.html">Makeup</a></li>
+                    <li><a href="shop.html">Fragrance</a></li>
+                    <li><a href="shop.html">Bath & Body</a></li>
+                    <li><a href="shop.html">Gift Sets</a></li>
+                </ul>
+            </div>
+
+            <!-- Get in Touch Section -->
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Salem, Tamil Nadu</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 2345678901</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@stackly.com</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="container">
+            <div class="footer-copyright">
+                <span>&copy; 2026 Stackly. All rights reserved.</span>
+                <div>
+                    <a href="404.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

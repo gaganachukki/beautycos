@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Stackly</title>
+    <meta name="description" content="Read our latest blog posts about beauty and cosmetics tips at Stackly.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.webp" alt="Stackly Logo">
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <a href="shop.html">Shop</a>
+                        <span class="badge">New</span>
+                    </li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="login.html" class="login-btn">
+                    <i class="fa-regular fa-user"></i>
+                    Login
+                </a>
+                <a href="cart.html" class="cart-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Blog Hero Section -->
+        <section class="blog-hero">
+            <div class="container">
+                <div class="blog-hero-content">
+                    <h1>Beauty & Wellness Blog</h1>
+                    <p>Expert tips, tutorials, and insights for your daily beauty routine</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Search & Filter -->
+        <section class="blog-search">
+            <div class="container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search articles...">
+                    <button onclick="window.location.href='404.html'; return false;"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="blog-tags">
+                    <span class="tag active">All</span>
+                    <span class="tag">Skincare</span>
+                    <span class="tag">Makeup</span>
+                    <span class="tag">Tutorials</span>
+                    <span class="tag">Trends</span>
+                    <span class="tag">Wellness</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts Grid -->
+        <section class="blog-posts">
+            <div class="container">
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/cat-skincare.webp" alt="Blog Post">
+                        <span class="blog-category">Skincare</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="author">By Sarah Johnson</span>
+                            <span class="date">November 15, 2024</span>
+                            <span class="read-time">5 min read</span>
+                        </div>
+                        <h3>Complete Winter Skincare Guide: Protect Your Skin from Harsh Weather</h3>
+                        <p>Winter weather can be harsh on your skin, causing dryness and irritation. Learn the essential steps to maintain a healthy complexion during cold months with our expert-backed skincare routine.</p>
+                        <div class="blog-tags-item">
+                            <span>#SkincareTips</span>
+                            <span>#WinterBeauty</span>
+                            <span>#SkincareRoutine</span>
+                        </div>
+                        <a href="404.html" class="read-more-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/cat-makeup.webp" alt="Blog Post">
+                        <span class="blog-category">Makeup</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="author">By Emma Rodriguez</span>
+                            <span class="date">November 10, 2024</span>
+                            <span class="read-time">7 min read</span>
+                        </div>
+                        <h3>Master the Art of Contouring: Step-by-Step Tutorial for Beginners</h3>
+                        <p>Contouring can enhance your facial features and create dimension. Our step-by-step guide breaks down the basics so anyone can master this popular makeup technique with confidence.</p>
+                        <div class="blog-tags-item">
+                            <span>#MakeupTutorial</span>
+                            <span>#Contouring</span>
+                            <span>#BeautyTips</span>
+                        </div>
+                        <a href="404.html" class="read-more-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/cat-fragrance.webp" alt="Blog Post">
+                        <span class="blog-category">Wellness</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="author">By Dr. Michael Chen</span>
+                            <span class="date">November 8, 2024</span>
+                            <span class="read-time">6 min read</span>
+                        </div>
+                        <h3>The Science Behind Ingredient Labels: What Your Skincare Actually Contains</h3>
+                        <p>Understanding skincare ingredients can help you make better product choices. Discover what INCI names mean, which ingredients work best for your skin type, and how to read labels like a pro.</p>
+                        <div class="blog-tags-item">
+                            <span>#SkinScienceInformation</span>
+                            <span>#Ingredients</span>
+                            <span>#Dermatology</span>
+                        </div>
+                        <a href="404.html" class="read-more-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/offer-summer.webp" alt="Blog Post">
+                        <span class="blog-category">Trends</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="author">By Lisa Thompson</span>
+                            <span class="date">November 5, 2024</span>
+                            <span class="read-time">4 min read</span>
+                        </div>
+                        <h3>2024 Beauty Trends: Clean Girl Aesthetic Takes Center Stage</h3>
+                        <p>The clean girl aesthetic is dominating 2024. Explore minimalist makeup looks, natural beauty trends, and the products you need to achieve that effortlessly radiant appearance everyone is craving.</p>
+                        <div class="blog-tags-item">
+                            <span>#BeautyTrends</span>
+                            <span>#CleanBeauty</span>
+                            <span>#2024Trends</span>
+                        </div>
+                        <a href="404.html" class="read-more-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/offer-new.webp" alt="Blog Post">
+                        <span class="blog-category">Skincare</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="author">By Priya Kapoor</span>
+                            <span class="date">November 1, 2024</span>
+                            <span class="read-time">8 min read</span>
+                        </div>
+                        <h3>Addressing Acne Myths: What Really Works and What Doesn't</h3>
+                        <p>Acne is surrounded by myths and misconceptions. Learn which treatments actually work according to dermatology, common myths that might be harming your skin, and proven solutions for clear complexion.</p>
+                        <div class="blog-tags-item">
+                            <span>#AcneTreatment</span>
+                            <span>#SkinHealth</span>
+                            <span>#Dermatology</span>
+                        </div>
+                        <a href="404.html" class="read-more-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/product-10.webp" alt="Blog Post">
+                        <span class="blog-category">Tutorials</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="author">By Amanda Brooks</span>
+                            <span class="date">October 28, 2024</span>
+                            <span class="read-time">6 min read</span>
+                        </div>
+                        <h3>5-Minute Makeup Routine: Look Polished Even on Busy Mornings</h3>
+                        <p>Don't have time for a full makeup routine? Learn our quick 5-minute makeup formula that gives you a polished, put-together look perfect for work, dates, or anywhere on your busy schedule.</p>
+                        <div class="blog-tags-item">
+                            <span>#QuickMakeup</span>
+                            <span>#MakeupHacks</span>
+                            <span>#TimeSaving</span>
+                        </div>
+                        <a href="404.html" class="read-more-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pagination -->
+        <section class="blog-pagination">
+            <div class="container">
+                <button class="prev-btn" onclick="window.location.href='404.html'; return false;"><i class="fas fa-chevron-left"></i> Previous</button>
+                <div class="page-numbers">
+                    <span class="page-num active">1</span>
+                    <span class="page-num">2</span>
+                    <span class="page-num">3</span>
+                    <span class="page-num">4</span>
+                </div>
+                <button class="next-btn" onclick="window.location.href='404.html'; return false;">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <div class="footer-about-logo">
+                    <img src="assets/logo.webp" alt="Stackly Logo">
+                </div>
+                <p>Discover your natural glow with our premium collection of cosmetics and skincare products, designed for every beauty.</p>
+                <div class="footer-socials">
+                    <a href="404.html" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404.html" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="404.html" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404.html" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="shop.html">Shop Collection</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="shop.html">Skincare</a></li>
+                    <li><a href="shop.html">Makeup</a></li>
+                    <li><a href="shop.html">Fragrance</a></li>
+                    <li><a href="shop.html">Bath & Body</a></li>
+                    <li><a href="shop.html">Gift Sets</a></li>
+                </ul>
+            </div>
+
+            <!-- Get in Touch Section -->
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Salem, Tamil Nadu</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 2345678901</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@stackly.com</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="container">
+            <div class="footer-copyright">
+                <span>&copy; 2026 Stackly. All rights reserved.</span>
+                <div>
+                    <a href="404.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
