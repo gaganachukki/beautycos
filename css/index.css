@@ -433,62 +433,7 @@
     transform: translateY(-2px);
 }
 
-/* Responsive updates for new sections */
-@media (max-width: 992px) {
-    .categories-grid, .products-grid, .combo-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 768px) {
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .why-choose-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .combo-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .combo-card.popular {
-        transform: none;
-    }
-    
-    .combo-card.popular:hover {
-        transform: translateY(-10px);
-    }
-}
-
-@media (max-width: 576px) {
-    .categories-grid, .products-grid, .combo-grid, .why-choose-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .banner-content h2 {
-        font-size: 32px;
-    }
-    
-    .hero-title {
-        font-size: 36px;
-    }
-    
-    .hero-title .highlight {
-        font-size: 46px;
-    }
-    
-    .hero-desc {
-        font-size: 14px;
-        margin-bottom: 25px;
-    }
-
-    .combo-card {
-        padding: 25px;
-    }
-}
 .testimonials-section {
     padding: 80px 0;
     background-color: #ffffff;
@@ -1065,3 +1010,60 @@
 .why-choose-grid .why-choose-card:nth-child(4).is-visible { animation-delay: 0.45s; }
 
 .special-offers .container .offer-card:nth-child(2).is-visible { animation-delay: 0.2s; }
+
+/* Responsive updates for new sections */
+@media (max-width: 992px) {
+    .categories-grid, .products-grid, .combo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .why-choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .combo-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .combo-card.popular {
+        transform: none;
+    }
+    
+    .combo-card.popular:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 576px) {
+    .categories-grid, .products-grid, .combo-grid, .why-choose-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .banner-content h2 {
+        font-size: 32px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-title .highlight {
+        font-size: 46px;
+    }
+    
+    .hero-desc {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .combo-card {
+        padding: 25px;
+    }
+}

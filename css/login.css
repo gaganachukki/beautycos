@@ -390,3 +390,28 @@
         padding: 12px;
     }
 }
+
+/* Toast Notification */
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e895a0;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(232, 149, 160, 0.3);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 500;
+    z-index: 9999;
+    transform: translateX(150%);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toast-notification.show {
+    transform: translateX(0);
+}

@@ -280,6 +280,16 @@
     transform: translateY(-1px);
 }
 
+/* Contact Map */
+.contact-map {
+    margin-top: 40px;
+}
+
+.contact-map iframe {
+    display: block;
+    width: 100%;
+}
+
 /* FAQ Section */
 .contact-faq {
     padding: 80px 0;

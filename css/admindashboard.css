@@ -490,6 +490,12 @@ tbody tr:hover {
     position: relative;
 }
 
+.customers-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
 @media (max-width: 1200px) {
     .dashboard-cards { grid-template-columns: repeat(2, 1fr); }
     .charts-grid { grid-template-columns: 1fr; }
@@ -580,5 +586,8 @@ tbody tr:hover {
         padding: 15px;
         max-width: 100%;
         box-sizing: border-box;
+    }
+    .customers-grid {
+        grid-template-columns: 1fr;
     }
 }

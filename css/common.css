@@ -345,6 +345,10 @@ footer > .container:last-of-type {
 }
 
 /* Mobile Menu Styles */
+.mobile-only {
+    display: none;
+}
+
 .mobile-menu-btn {
     display: none;
     font-size: 24px;
@@ -389,8 +393,25 @@ footer > .container:last-of-type {
     
     header nav ul {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 25px;
+    }
+    
+    .mobile-only {
+        display: block;
+        margin-top: 15px;
+    }
+    
+    .mobile-only .login-btn {
+        background-color: var(--primary-color);
+        color: white !important;
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+    }
+    
+    .mobile-only .login-btn:hover {
+        background-color: #b55a66;
     }
     
     header nav ul li a {

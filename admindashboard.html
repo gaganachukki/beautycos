@@ -275,7 +275,7 @@
                     </div>
                 </div>
 
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 25px; margin-bottom: 25px;">
+                <div class="customers-grid" style="margin-bottom: 25px;">
                     <div class="recent-activity">
                         <h3>Customer Directory</h3>
                         <div style="overflow-x: auto;">
@@ -424,6 +424,11 @@
                         const targetSection = document.getElementById(targetId);
                         if (targetSection) {
                             targetSection.style.display = 'block';
+                        }
+                        
+                        // Close sidebar on mobile
+                        if (window.innerWidth <= 768) {
+                            document.querySelector('.dashboard-sidebar').classList.remove('active');
                         }
                     }
                 });

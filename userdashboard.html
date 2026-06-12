@@ -356,6 +356,11 @@
                         if (targetSection) {
                             targetSection.style.display = 'block';
                         }
+                        
+                        // Close sidebar on mobile
+                        if (window.innerWidth <= 768) {
+                            document.querySelector('.dashboard-sidebar').classList.remove('active');
+                        }
                     }
                 });
             });
