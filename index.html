@@ -60,8 +60,12 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <video autoplay muted playsinline class="hero-video" id="heroPromoVideo">
+            <source src="assets/promo1.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content text-center">
                 <div class="hero-subtitle">DISCOVER YOUR BEAUTY</div>
                 <h2 class="hero-title">
                     Enhance Your
@@ -74,9 +78,6 @@
                 <a href="shop.html" class="shop-now-btn">
                     Shop Now <i class="fa-solid fa-arrow-right-long"></i>
                 </a>
-            </div>
-            <div class="hero-image">
-                <img src="assets/hero-index.webp" alt="Premium Cosmetics Products">
             </div>
         </div>
     </section>
@@ -131,7 +132,7 @@
                         <img src="assets/product-01.webp" alt="Radiance Serum">
                         <div class="product-actions">
                             <button class="action-btn" title="Add to Wishlist" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-heart"></i></button>
-                            <button class="action-btn" title="Quick View" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-eye"></i></button>
+                            <button class="action-btn" title="Quick View" onclick="window.location.href='shop.html'; return false;"><i class="fa-regular fa-eye"></i></button>
                         </div>
                     </div>
                     <div class="product-details">
@@ -148,7 +149,7 @@
                         <img src="assets/product-02.webp" alt="Velvet Matte Lipstick">
                         <div class="product-actions">
                             <button class="action-btn" title="Add to Wishlist" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-heart"></i></button>
-                            <button class="action-btn" title="Quick View" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-eye"></i></button>
+                            <button class="action-btn" title="Quick View" onclick="window.location.href='shop.html'; return false;"><i class="fa-regular fa-eye"></i></button>
                         </div>
                     </div>
                     <div class="product-details">
@@ -166,7 +167,7 @@
                         <img src="assets/product-03.webp" alt="Hydrating Face Cream">
                         <div class="product-actions">
                             <button class="action-btn" title="Add to Wishlist" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-heart"></i></button>
-                            <button class="action-btn" title="Quick View" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-eye"></i></button>
+                            <button class="action-btn" title="Quick View" onclick="window.location.href='shop.html'; return false;"><i class="fa-regular fa-eye"></i></button>
                         </div>
                     </div>
                     <div class="product-details">
@@ -183,7 +184,7 @@
                         <img src="assets/product-04.webp" alt="Silk Foundation">
                         <div class="product-actions">
                             <button class="action-btn" title="Add to Wishlist" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-heart"></i></button>
-                            <button class="action-btn" title="Quick View" onclick="window.location.href='404.html'; return false;"><i class="fa-regular fa-eye"></i></button>
+                            <button class="action-btn" title="Quick View" onclick="window.location.href='shop.html'; return false;"><i class="fa-regular fa-eye"></i></button>
                         </div>
                     </div>
                     <div class="product-details">
@@ -203,7 +204,7 @@
             <div class="banner-content">
                 <h2>Our Clean Beauty Promise</h2>
                 <p>100% Cruelty-Free, Vegan, and formulated without parabens or sulfates. Because your skin deserves the best of nature.</p>
-                <a href="shop.html" class="banner-btn">Read Our Story</a>
+                <a href="about.html" class="banner-btn">Read Our Story</a>
             </div>
         </div>
     </section>
@@ -313,6 +314,80 @@
                     </div>
                     <h3>Expert Support</h3>
                     <p>24/7 customer support team ready to help with product recommendations and queries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combo Deals Section -->
+    <section class="combo-deals">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose the Right Combo</h2>
+                <p>Perfectly curated sets for your beauty routine.</p>
+            </div>
+            <div class="combo-grid">
+                <!-- Basic Combo -->
+                <div class="combo-card">
+                    <div class="combo-header">
+                        <h3>Everyday Glow</h3>
+                        <p>For daily skincare</p>
+                        <div class="combo-price">
+                            <span class="currency">$</span>
+                            <span class="amount">49</span>
+                            <span class="period">/set</span>
+                        </div>
+                    </div>
+                    <ul class="combo-features">
+                        <li><i class="fas fa-check"></i> Cleanser & Toner</li>
+                        <li><i class="fas fa-check"></i> Daily Moisturizer</li>
+                        <li><i class="fas fa-check"></i> SPF 30 Sunscreen</li>
+                        <li><i class="fas fa-check"></i> Basic Pouch</li>
+                    </ul>
+                    <button class="combo-btn" onclick="window.location.href='shop.html'; return false;">Buy Now</button>
+                </div>
+
+                <!-- Premium Combo -->
+                <div class="combo-card popular">
+                    <div class="popular-badge">Popular</div>
+                    <div class="combo-header">
+                        <h3>Luxury Glam</h3>
+                        <p>Complete makeup essentials</p>
+                        <div class="combo-price">
+                            <span class="currency">$</span>
+                            <span class="amount">129</span>
+                            <span class="period">/set</span>
+                        </div>
+                    </div>
+                    <ul class="combo-features">
+                        <li><i class="fas fa-check"></i> Flawless Foundation</li>
+                        <li><i class="fas fa-check"></i> Velvet Lipstick</li>
+                        <li><i class="fas fa-check"></i> Eyeshadow Palette</li>
+                        <li><i class="fas fa-check"></i> Free Beauty Blender</li>
+                        <li><i class="fas fa-check"></i> Premium Packaging</li>
+                    </ul>
+                    <button class="combo-btn" onclick="window.location.href='shop.html'; return false;">Buy Now</button>
+                </div>
+
+                <!-- Enterprise Combo -->
+                <div class="combo-card">
+                    <div class="combo-header">
+                        <h3>Ultimate Bridal</h3>
+                        <p>The complete wedding day kit</p>
+                        <div class="combo-price">
+                            <span class="currency">$</span>
+                            <span class="amount">299</span>
+                            <span class="period">/set</span>
+                        </div>
+                    </div>
+                    <ul class="combo-features">
+                        <li><i class="fas fa-check"></i> Full Skincare Routine</li>
+                        <li><i class="fas fa-check"></i> Premium Makeup Collection</li>
+                        <li><i class="fas fa-check"></i> Professional Brushes</li>
+                        <li><i class="fas fa-check"></i> VIP 1-on-1 Consultation</li>
+                        <li><i class="fas fa-check"></i> Luxury Vanity Box</li>
+                    </ul>
+                    <button class="combo-btn" onclick="window.location.href='shop.html'; return false;">Buy Now</button>
                 </div>
             </div>
         </div>
@@ -428,5 +503,21 @@
     <!-- JS script -->
     <script src="js/cart.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        // Hero Promo Video Playlist
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoElement = document.getElementById('heroPromoVideo');
+            if (videoElement) {
+                const promos = ['assets/promo1.mp4', 'assets/promo2.mp4', 'assets/promo3.mp4', 'assets/promo4.mp4'];
+                let currentPromo = 0;
+                
+                videoElement.addEventListener('ended', function() {
+                    currentPromo = (currentPromo + 1) % promos.length;
+                    videoElement.src = promos[currentPromo];
+                    videoElement.play().catch(e => console.log('Autoplay prevented:', e));
+                });
+            }
+        });
+    </script>
 </body>
 </html>

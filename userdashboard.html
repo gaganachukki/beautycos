@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Beauty Cosmetics</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/userdashboard.css">
+</head>
+<body class="dashboard-body">
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.webp" alt="Beauty Cosmetics">
+                    <span class="panel-label">User Panel</span>
+                </div>
+                <i class="fas fa-times close-sidebar" onclick="document.querySelector('.dashboard-sidebar').classList.remove('active')" style="cursor: pointer; color: white; font-size: 20px; display: none;"></i>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active" data-target="section-dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="#" data-target="section-orders"><i class="fas fa-shopping-bag"></i> My Orders</a></li>
+                    <li><a href="#" data-target="section-appointments"><i class="fas fa-calendar-alt"></i> My Appointments</a></li>
+                    <li><a href="#" data-target="section-wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+                    <li><a href="#" data-target="section-profile"><i class="fas fa-spa"></i> Beauty Profile</a></li>
+                    <li><a href="#" data-target="section-reviews"><i class="fas fa-star"></i> My Reviews</a></li>
+                    <li><a href="#" data-target="section-settings"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="login.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Mobile Top Bar -->
+            <div class="mobile-top-bar">
+                <button class="hamburger-btn" onclick="document.querySelector('.dashboard-sidebar').classList.add('active')"><i class="fas fa-bars"></i></button>
+                <img src="assets/logo.webp" alt="Beauty Cosmetics" class="mobile-logo">
+                <div class="profile-dropdown mobile-avatar" style="margin-left: 0;">
+                    <img src="https://ui-avatars.com/api/?name=Sarah+Jane&background=cb6a78&color=fff" alt="Profile" style="width: 40px; height: 40px;">
+                </div>
+            </div>
+
+            <!-- Top Header Row -->
+            <header class="dashboard-topbar">
+                <div class="welcome-section" style="margin-bottom: 0;">
+                    <p class="welcome-sub" style="color: var(--text-gray); font-size: 12px; letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase;">WELCOME BACK</p>
+                    <h1 class="welcome-title" style="margin-bottom: 0; font-family: var(--font-sans); font-size: 36px; font-weight: 700; color: var(--text-dark);">Hey, Sarah</h1>
+                    <p class="welcome-desc" style="color: var(--text-gray); font-size: 15px; margin-top: 8px;">Here's what's happening today.</p>
+                </div>
+                
+                <div class="topbar-actions" style="display: flex; align-items: center; gap: 20px;">
+                    <div class="topbar-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search orders...">
+                    </div>
+                    <div class="notification-btn">
+                        <i class="far fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="profile-dropdown">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+Jane&background=cb6a78&color=fff" alt="Profile">
+                        <span style="font-weight: 500;">Sarah J.</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="dashboard-content">
+                
+                <div id="section-dashboard" class="dashboard-section active">
+                    <!-- Stats Cards -->
+                    <div class="dashboard-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-shopping-bag"></i></div>
+                        <div class="stat-details">
+                            <h3>Total Orders</h3>
+                            <p>12</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(85, 197, 204, 0.1); color: #55c5cc;"><i class="fas fa-star"></i></div>
+                        <div class="stat-details">
+                            <h3>Loyalty Points</h3>
+                            <p>450</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(245, 166, 35, 0.1); color: #f5a623;"><i class="far fa-calendar-check"></i></div>
+                        <div class="stat-details">
+                            <h3>Upcoming Appointments</h3>
+                            <p>2</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animated Bar Graph & Pie Chart -->
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Monthly Spending ($)</h3>
+                        </div>
+                        <div class="canvas-wrapper">
+                            <canvas id="spendingChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Orders by Status</h3>
+                        </div>
+                        <div class="canvas-wrapper">
+                            <canvas id="statusPieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity Table -->
+                <div class="recent-activity">
+                    <h3>Recent Orders</h3>
+                    <div style="overflow-x: auto;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#BC-1045</td>
+                                    <td>Oct 12, 2026</td>
+                                    <td>Radiant Serum, Matte Lipstick</td>
+                                    <td>$85.00</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#BC-1042</td>
+                                    <td>Oct 05, 2026</td>
+                                    <td>Hydrating Cleanser</td>
+                                    <td>$32.00</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#BC-1038</td>
+                                    <td>Sep 28, 2026</td>
+                                    <td>Luxury Skincare Set</td>
+                                    <td>$150.00</td>
+                                    <td><span class="status processing">Processing</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div> <!-- End section-dashboard -->
+
+                <!-- Orders Section -->
+                <div id="section-orders" class="dashboard-section" style="display: none;">
+                    <div class="section-header">
+                        <h2>My Orders</h2>
+                        <p>View your complete order history.</p>
+                    </div>
+                    <div class="recent-activity">
+                        <div style="overflow-x: auto;">
+                            <table>
+                                <thead><tr><th>Order ID</th><th>Date</th><th>Items</th><th>Total</th><th>Status</th><th>Action</th></tr></thead>
+                                <tbody>
+                                    <tr><td>#BC-1048</td><td>Oct 20, 2026</td><td>Vitamin C Serum</td><td>$45.00</td><td><span class="status processing">Processing</span></td><td><button class="action-btn" onclick="window.location.href='404.html'; return false;">Track</button></td></tr>
+                                    <tr><td>#BC-1047</td><td>Oct 18, 2026</td><td>Rose Quartz Roller</td><td>$24.00</td><td><span class="status pending">Pending</span></td><td><button class="action-btn" onclick="window.location.href='404.html'; return false;">Track</button></td></tr>
+                                    <tr><td>#BC-1046</td><td>Oct 15, 2026</td><td>Matte Foundation</td><td>$38.00</td><td><span class="status delivered">Delivered</span></td><td><button class="action-btn" onclick="window.location.href='404.html'; return false;">Invoice</button></td></tr>
+                                    <tr><td>#BC-1045</td><td>Oct 12, 2026</td><td>Radiant Serum, Matte Lipstick</td><td>$85.00</td><td><span class="status delivered">Delivered</span></td><td><button class="action-btn" onclick="window.location.href='404.html'; return false;">Track</button></td></tr>
+                                    <tr><td>#BC-1042</td><td>Oct 05, 2026</td><td>Hydrating Cleanser</td><td>$32.00</td><td><span class="status delivered">Delivered</span></td><td><button class="action-btn" onclick="window.location.href='404.html'; return false;">Invoice</button></td></tr>
+                                    <tr><td>#BC-1038</td><td>Sep 28, 2026</td><td>Luxury Skincare Set</td><td>$150.00</td><td><span class="status processing">Processing</span></td><td><button class="action-btn" onclick="window.location.href='404.html'; return false;">Track</button></td></tr>
+                                    <tr><td>#BC-1030</td><td>Sep 10, 2026</td><td>Night Repair Cream</td><td>$85.00</td><td><span class="status delivered">Delivered</span></td><td><button class="action-btn" onclick="window.location.href='404.html'; return false;">Invoice</button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appointments Section -->
+                <div id="section-appointments" class="dashboard-section" style="display: none;">
+                    <div class="section-header">
+                        <h2>My Appointments</h2>
+                        <p>Your upcoming salon visits and makeovers.</p>
+                    </div>
+                    <div class="recent-activity">
+                        <div style="overflow-x: auto;">
+                            <table>
+                                <thead><tr><th>Date & Time</th><th>Service</th><th>Location</th><th>Status</th><th>Action</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Oct 18, 2026 - 2:00 PM</td><td>Full Glam Makeover</td><td>Downtown Store</td><td><span class="status processing">Upcoming</span></td><td><button class="action-btn" style="color:#e74c3c; border-color:#e74c3c;" onclick="window.location.href='404.html'; return false;">Cancel</button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wishlist Section -->
+                <div id="section-wishlist" class="dashboard-section" style="display: none;">
+                    <div class="section-header">
+                        <h2>Wishlist</h2>
+                        <p>Products you've saved for later.</p>
+                    </div>
+                    <div class="wishlist-grid">
+                        <div class="wishlist-card">
+                            <div class="wishlist-img-placeholder" style="background:#fce8eb; height:120px; border-radius:8px; margin-bottom:15px; display:flex; align-items:center; justify-content:center; color:var(--primary-color);"><i class="fas fa-image fa-2x"></i></div>
+                            <h4 style="margin:0 0 5px 0;">Rose Quartz Roller</h4>
+                            <p style="color:var(--primary-color); font-weight:600; margin:0 0 15px 0;">$24.00</p>
+                            <button class="action-btn" style="width:100%; border-color:var(--primary-color); color:var(--primary-color);" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                        <div class="wishlist-card">
+                            <div class="wishlist-img-placeholder" style="background:#fce8eb; height:120px; border-radius:8px; margin-bottom:15px; display:flex; align-items:center; justify-content:center; color:var(--primary-color);"><i class="fas fa-image fa-2x"></i></div>
+                            <h4 style="margin:0 0 5px 0;">Hydrating Night Cream</h4>
+                            <p style="color:var(--primary-color); font-weight:600; margin:0 0 15px 0;">$48.00</p>
+                            <button class="action-btn" style="width:100%; border-color:var(--primary-color); color:var(--primary-color);" onclick="window.location.href='404.html'; return false;">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beauty Profile Section -->
+                <div id="section-profile" class="dashboard-section" style="display: none;">
+                    <div class="section-header">
+                        <h2>Beauty Profile</h2>
+                        <p>Help us personalize your recommendations.</p>
+                    </div>
+                    <div class="recent-activity" style="max-width: 600px;">
+                        <form class="settings-form" id="profile-form">
+                            <div class="form-group">
+                                <label>Skin Type</label>
+                                <select class="form-control" required>
+                                    <option>Combination</option>
+                                    <option>Oily</option>
+                                    <option>Dry</option>
+                                    <option>Normal</option>
+                                    <option>Sensitive</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Primary Skin Concern</label>
+                                <select class="form-control" required>
+                                    <option>Anti-Aging</option>
+                                    <option>Acne & Blemishes</option>
+                                    <option>Dryness</option>
+                                    <option>Dullness</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="action-btn" style="background-color:var(--primary-color); color:#fff; border:none; padding:12px; margin-top:15px;" onclick="window.location.href='404.html'; return false;">SAVE PROFILE</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Reviews Section -->
+                <div id="section-reviews" class="dashboard-section" style="display: none;">
+                    <div class="section-header">
+                        <h2>My Reviews</h2>
+                        <p>Reviews you've left on products.</p>
+                    </div>
+                    <div class="recent-activity">
+                        <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; margin-bottom: 15px;">
+                            <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+                                <h4 style="margin:0;">Radiant Serum</h4>
+                                <div style="color:#f1c40f;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                            <p style="color:var(--text-gray); font-size:14px; margin:0;">Absolutely love this serum! It leaves my skin glowing all day without feeling greasy.</p>
+                        </div>
+                        <div>
+                            <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+                                <h4 style="margin:0;">Matte Lipstick (Ruby Red)</h4>
+                                <div style="color:#f1c40f;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            </div>
+                            <p style="color:var(--text-gray); font-size:14px; margin:0;">Great color payoff, but it can be a bit drying if you don't prep your lips first.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Section -->
+                <div id="section-settings" class="dashboard-section" style="display: none;">
+                    <div class="section-header">
+                        <h2>Account Settings</h2>
+                        <p>Manage your personal details and password.</p>
+                    </div>
+                    <div class="recent-activity" style="max-width: 600px;">
+                        <form class="settings-form" id="settings-form">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" value="Sarah Jane" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" value="sarah.j@example.com" class="form-control" required>
+                            </div>
+                            <div class="form-group" style="margin-top:15px;">
+                                <label>New Password</label>
+                                <input type="password" placeholder="Leave blank to keep current" class="form-control">
+                            </div>
+                            <button type="submit" class="action-btn" style="background-color:var(--primary-color); color:#fff; border:none; padding:12px; margin-top:15px;" onclick="window.location.href='404.html'; return false;">UPDATE SETTINGS</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Popup -->
+    <div id="toast" class="toast-popup"><i class="fas fa-check-circle" style="margin-right:8px;"></i> Changes saved successfully!</div>
+
+    <script>
+        // SPA Sidebar Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+            const sections = document.querySelectorAll('.dashboard-section');
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.getAttribute('data-target')) {
+                        e.preventDefault();
+                        
+                        // Remove active class from all links
+                        sidebarLinks.forEach(l => l.classList.remove('active'));
+                        // Add active class to clicked link
+                        this.classList.add('active');
+                        
+                        // Hide all sections
+                        sections.forEach(sec => {
+                            sec.style.display = 'none';
+                        });
+                        
+                        // Show target section
+                        const targetId = this.getAttribute('data-target');
+                        const targetSection = document.getElementById(targetId);
+                        if (targetSection) {
+                            targetSection.style.display = 'block';
+                        }
+                    }
+                });
+            });
+        });
+
+        // Chart.js initialization with animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('spendingChart').getContext('2d');
+            
+            // Gradient for bars
+            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            gradient.addColorStop(0, 'rgba(203, 106, 120, 0.8)'); // var(--primary-color)
+            gradient.addColorStop(1, 'rgba(203, 106, 120, 0.2)');
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                    datasets: [{
+                        label: 'Spending',
+                        data: [45, 120, 60, 90, 40, 117],
+                        backgroundColor: gradient,
+                        borderColor: '#cb6a78',
+                        borderWidth: 1,
+                        borderRadius: 6,
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeOutQuart'
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: '#1a1a1a',
+                            padding: 10,
+                            titleFont: { family: "'Poppins', sans-serif", size: 13 },
+                            bodyFont: { family: "'Poppins', sans-serif", size: 14, weight: 'bold' },
+                            displayColors: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return '$' + context.parsed.y;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#f0f0f0',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                font: { family: "'Poppins', sans-serif" },
+                                color: '#8b8d97',
+                                callback: function(value) {
+                                    return '$' + value;
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            },
+                            ticks: {
+                                font: { family: "'Poppins', sans-serif" },
+                                color: '#8b8d97'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Orders by Status Pie Chart
+            const pieCtx = document.getElementById('statusPieChart').getContext('2d');
+            new Chart(pieCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Delivered', 'Processing', 'Cancelled'],
+                    datasets: [{
+                        data: [8, 3, 1],
+                        backgroundColor: ['#cb6a78', '#f1c40f', '#e74c3c'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { font: { family: "'Poppins', sans-serif" }, color: '#666666', padding: 20 } }
+                    },
+                    cutout: '70%'
+                }
+            });
+        });
+
+        // Scroll Animation Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const animatedElements = document.querySelectorAll('.stat-card, .chart-container, .recent-activity, .dashboard-cards, .section-header, .wishlist-card');
+            animatedElements.forEach(el => {
+                el.classList.add('scroll-animate');
+                observer.observe(el);
+            });
+        });
+
+        // Form Submission Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load User Name from LocalStorage
+            const userName = localStorage.getItem('beautyUserName');
+            if (userName) {
+                // Update welcome title
+                const welcomeTitle = document.querySelector('.welcome-title');
+                if (welcomeTitle) welcomeTitle.innerText = 'Hey, ' + userName;
+                
+                // Update sidebar profile name
+                const profileSpan = document.querySelector('.profile-dropdown span');
+                if (profileSpan) profileSpan.innerText = userName;
+                
+                // Update avatars
+                const profileImgs = document.querySelectorAll('.profile-dropdown img');
+                profileImgs.forEach(img => img.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(userName)}&background=cb6a78&color=fff`);
+
+                // Update settings form input
+                const settingsNameInput = document.querySelector('#settings-form input[type="text"]');
+                if (settingsNameInput) settingsNameInput.value = userName;
+            }
+
+            const forms = document.querySelectorAll('.settings-form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Prevent actual page reload
+                    
+                    // Simulate successful save and redirect to dashboard overview
+                    const dashboardLink = document.querySelector('.sidebar-nav a[data-target="section-dashboard"]');
+                    if (dashboardLink) {
+                        dashboardLink.click();
+                    }
+                    
+                    const toast = document.getElementById('toast');
+                    if (toast) {
+                        toast.classList.add('show');
+                        setTimeout(() => {
+                            toast.classList.remove('show');
+                        }, 3000);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -231,17 +231,63 @@
             </div>
         </section>
 
-        <!-- Pagination -->
-        <section class="blog-pagination">
+        <!-- Featured Video Tutorial -->
+        <section class="blog-video-section">
             <div class="container">
-                <button class="prev-btn" onclick="window.location.href='404.html'; return false;"><i class="fas fa-chevron-left"></i> Previous</button>
-                <div class="page-numbers">
-                    <span class="page-num active">1</span>
-                    <span class="page-num">2</span>
-                    <span class="page-num">3</span>
-                    <span class="page-num">4</span>
+                <div class="video-container">
+                    <div class="video-overlay">
+                        <i class="fas fa-play-circle play-btn"></i>
+                        <h2>Masterclass: Everyday Natural Glow</h2>
+                        <p>Watch our top makeup artist reveal the secrets to a flawless, natural look in under 10 minutes.</p>
+                    </div>
+                    <video autoplay loop muted playsinline>
+                        <source src="assets/promo2.mp4" type="video/mp4">
+                    </video>
                 </div>
-                <button class="next-btn" onclick="window.location.href='404.html'; return false;">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Newsletter / Beauty Club -->
+        <section class="blog-newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Join the Beauty Club</h2>
+                        <p>Subscribe to receive weekly beauty tips, exclusive tutorials, and early access to new product launches.</p>
+                    </div>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit">Subscribe Now <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Feed -->
+        <section class="blog-social">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                    <h2 style="font-family: var(--font-serif); font-size: 36px; color: var(--text-dark);">Follow Our Journey</h2>
+                    <p style="color: var(--text-gray);">@StacklyBeauty on Instagram</p>
+                </div>
+                <div class="social-grid">
+                    <a href="404.html" class="social-item">
+                        <img src="assets/product-01.webp" alt="Social Post">
+                        <div class="social-overlay"><i class="fab fa-instagram"></i></div>
+                    </a>
+                    <a href="404.html" class="social-item">
+                        <img src="assets/ai4.webp" alt="Social Post">
+                        <div class="social-overlay"><i class="fab fa-instagram"></i></div>
+                    </a>
+                    <a href="404.html" class="social-item">
+                        <img src="assets/product-02.webp" alt="Social Post">
+                        <div class="social-overlay"><i class="fab fa-instagram"></i></div>
+                    </a>
+                    <a href="404.html" class="social-item">
+                        <img src="assets/ai5.webp" alt="Social Post">
+                        <div class="social-overlay"><i class="fab fa-instagram"></i></div>
+                    </a>
+                </div>
             </div>
         </section>
     </main>

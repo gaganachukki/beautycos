@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Stackly</title>
+    <title>Login - Beauty Cosmetics</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,41 +17,117 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
-<body>
+<body class="auth-body">
 
-    <!-- Login Section -->
-    <section class="login-section">
-        <div class="login-container">
-            <h2 class="login-title">Welcome Back</h2>
-            <p class="login-subtitle">Sign in to your Stackly account</p>
-            
-            <form action="404.html" method="POST" class="login-form">
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <div class="auth-wrapper">
+        <!-- Left Panel -->
+        <div class="auth-left">
+            <div class="auth-left-content">
+                <a href="index.html" class="logo-container" style="text-decoration: none;">
+                    <img src="assets/logo.webp" alt="Beauty Cosmetics Logo" style="height: 40px;">
+                    <div class="logo-text" style="color: white; margin-left: 10px;">
+                        <h1 style="margin: 0; font-size: 24px;">Beauty Cosmetics</h1>
+                    </div>
+                </a>
+                
+                <div class="auth-left-text">
+                    <h2>Welcome Back to <br><span class="highlight-text">Beauty Cosmetics</span></h2>
+                    <p>Access your dashboard to manage upcoming orders, view bookings, and collaborate with our premium beauty experts.</p>
                 </div>
                 
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Managing our beauty routine and appointments was seamless thanks to the Beauty Cosmetics platform."</p>
+                    <span>- Sarah J., Top Reviewer</span>
                 </div>
-                
-                <div class="form-options">
-                    <label class="remember-me">
-                        <input type="checkbox" name="remember"> Remember me
-                    </label>
-                    <a href="404.html" class="forgot-password">Forgot Password?</a>
-                </div>
-                
-                <button type="submit" class="submit-btn" onclick="window.location.href='404.html'; return false;">Login</button>
-            </form>
-            
-            <p class="signup-link">Don't have an account? <a href="404.html">Sign up here</a></p>
+            </div>
         </div>
-    </section>
+
+        <!-- Right Panel -->
+        <div class="auth-right">
+            <div class="auth-right-content">
+                <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+                
+                <div class="auth-header">
+                    <h2>Welcome Back</h2>
+                    <p>Sign in to access your account</p>
+                </div>
+                
+                <div class="role-toggle">
+                    <button class="role-btn active" type="button" onclick="document.querySelectorAll('.role-btn').forEach(b => b.classList.remove('active')); this.classList.add('active');">
+                        <i class="far fa-user"></i>
+                        <span>Client</span>
+                    </button>
+                    <button class="role-btn" type="button" onclick="document.querySelectorAll('.role-btn').forEach(b => b.classList.remove('active')); this.classList.add('active');">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Admin</span>
+                    </button>
+                </div>
+                
+                <form action="404.html" method="POST" class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <a href="404.html" class="forgot-password">Forgot Password?</a>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" placeholder="Password" required>
+                            <i class="far fa-eye show-password" onclick="const p = document.getElementById('password'); p.type = p.type === 'password' ? 'text' : 'password';"></i>
+                        </div>
+                    </div>
+                    
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember"> Remember Me
+                    </label>
+                    
+                    <button type="submit" class="submit-btn" onclick="handleLogin(event)">Login</button>
+                </form>
+                
+                <p class="signup-link">Don't have an account? <a href="register.html">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
 
     <!-- JS script -->
-    <script src="js/cart.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        function handleLogin(e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('email');
+            
+            // Only proceed if email is filled (HTML5 validation takes care of empty if required, but just in case)
+            if (emailInput.checkValidity()) {
+                const roleBtn = document.querySelector('.role-btn.active span');
+                const role = roleBtn ? roleBtn.innerText : 'User';
+                const email = emailInput.value;
+                
+                if (email) {
+                    let namePart = email.split('@')[0];
+                    // Replace dots, underscores, and dashes with spaces
+                    namePart = namePart.replace(/[._-]/g, ' ');
+                    // Capitalize each word
+                    namePart = namePart.replace(/\b\w/g, char => char.toUpperCase());
+                    localStorage.setItem('beautyUserName', namePart);
+                    localStorage.setItem('beautyUserEmail', email);
+                } else {
+                    localStorage.setItem('beautyUserName', role === 'Admin' ? 'Admin' : 'Sarah');
+                    localStorage.setItem('beautyUserEmail', role === 'Admin' ? 'admin@beautycosmetics.com' : 'sarah.j@example.com');
+                }
+                
+                window.location.href = role === 'Admin' ? 'admindashboard.html' : 'userdashboard.html';
+            } else {
+                emailInput.reportValidity();
+            }
+        }
+    </script>
 </body>
 </html>

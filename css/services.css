@@ -1,7 +1,7 @@
 /* Services Hero Section */
 .services-hero {
-    padding: 80px 0;
-    background: linear-gradient(135deg, rgba(252,232,235,0.85) 0%, rgba(253,246,247,0.85) 100%), url('../assets/hero-services.webp');
+    padding: 180px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/hero-services.webp');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -10,9 +10,10 @@
 .services-hero-content h1 {
     font-family: var(--font-serif);
     font-size: 48px;
-    color: var(--text-dark);
+    color: #ffffff;
     margin-bottom: 20px;
     animation: fadeInDown 0.6s ease;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 @keyframes fadeInDown {
@@ -28,7 +29,8 @@
 
 .services-hero-content p {
     font-size: 18px;
-    color: var(--text-gray);
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     max-width: 600px;
     margin: 0 auto;
     animation: fadeInUp 0.6s ease 0.2s both;
@@ -148,7 +150,7 @@
 /* Service Process Section */
 .service-process {
     padding: 80px 0;
-    background: linear-gradient(135deg, rgba(252,232,235,0.85) 0%, rgba(253,246,247,0.85) 100%), url('../assets/hero-services.webp');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/hero-services.webp');
     background-size: cover;
     background-position: center;
 }
@@ -157,7 +159,8 @@
     font-family: var(--font-serif);
     font-size: 36px;
     text-align: center;
-    color: var(--text-dark);
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     margin-bottom: 60px;
 }
 

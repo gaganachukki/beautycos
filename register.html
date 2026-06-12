@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Beauty Cosmetics</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="auth-body">
+
+    <div class="auth-wrapper">
+        <!-- Left Panel -->
+        <div class="auth-left">
+            <div class="auth-left-content">
+                <a href="index.html" class="logo-container" style="text-decoration: none;">
+                    <img src="assets/logo.webp" alt="Beauty Cosmetics Logo" style="height: 40px;">
+                    <div class="logo-text" style="color: white; margin-left: 10px;">
+                        <h1 style="margin: 0; font-size: 24px;">Beauty Cosmetics</h1>
+                    </div>
+                </a>
+                
+                <div class="auth-left-text">
+                    <h2>Join <br><span class="highlight-text">Beauty Cosmetics</span></h2>
+                    <p>Create your account to start discovering premium products, connect with professional beauty consultants, and elevate your glow.</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The Beauty Cosmetics platform made finding my perfect skincare routine incredibly easy and stress-free."</p>
+                    <span>- Emma & Michael, Happy Customers</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="auth-right">
+            <div class="auth-right-content">
+                <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+                
+                <div class="auth-header">
+                    <h2>Create Account</h2>
+                    <p>Join our community of beauty enthusiasts</p>
+                </div>
+                
+                <div class="role-toggle">
+                    <button class="role-btn active" type="button" onclick="document.querySelectorAll('.role-btn').forEach(b => b.classList.remove('active')); this.classList.add('active');">
+                        <i class="far fa-user"></i>
+                        <span>Client</span>
+                    </button>
+                    <button class="role-btn" type="button" onclick="document.querySelectorAll('.role-btn').forEach(b => b.classList.remove('active')); this.classList.add('active');">
+                        <i class="fas fa-star"></i>
+                        <span>Admin</span>
+                    </button>
+                </div>
+                
+                <form action="404.html" method="POST" class="login-form">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" placeholder="Password (Min. 6 characters)" required>
+                            <i class="far fa-eye show-password" onclick="const p = document.getElementById('password'); p.type = p.type === 'password' ? 'text' : 'password';"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+                            <i class="far fa-eye show-password" onclick="const p = document.getElementById('confirm-password'); p.type = p.type === 'password' ? 'text' : 'password';"></i>
+                        </div>
+                    </div>
+                    
+                    <label class="terms-checkbox">
+                        <input type="checkbox" name="terms" required> 
+                        <span>I agree to the <a href="404.html">Terms & Conditions</a> and <a href="404.html">Privacy Policy</a></span>
+                    </label>
+                    
+                    <button type="submit" class="submit-btn" onclick="window.location.href='index.html'; return false;">Create Account</button>
+                </form>
+                
+                <p class="signup-link">Already have an account? <a href="login.html">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
