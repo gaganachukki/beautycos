@@ -19,6 +19,18 @@
     <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
+    <!-- Preloader -->
+        <div id="preloader">
+        <div class="preloader-content">
+            <img src="assets/product-01.webp" alt="Cosmetics" class="preloader-side-img left-img">
+            <div class="preloader-center">
+                <img src="assets/logo.webp" alt="Stackly Logo" class="preloader-logo">
+                <div class="loader"></div>
+            </div>
+            <img src="assets/product-02.webp" alt="Cosmetics" class="preloader-side-img right-img">
+        </div>
+    </div>
+
 
     <!-- Header Navigation -->
     <header>
@@ -323,5 +335,19 @@
     <!-- JS script -->
     <script src="js/cart.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+        // Preloader
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                const preloader = document.getElementById('preloader');
+                if (preloader) {
+                    preloader.classList.add('hide');
+                    setTimeout(() => preloader.remove(), 500);
+                }
+            }, 2000);
+        });
+    </script>
+
 </body>
 </html>

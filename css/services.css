@@ -68,6 +68,8 @@
     position: relative;
     overflow: hidden;
     border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card::before {
@@ -139,6 +141,7 @@
     letter-spacing: 1px;
     position: relative;
     z-index: 1;
+    margin-top: auto;
 }
 
 .service-btn:hover {
