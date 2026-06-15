@@ -287,6 +287,10 @@
         grid-template-columns: 1fr;
     }
     
+    .filters-wrapper {
+        position: static;
+    }
+    
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
     }

@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Get currency symbol
                 const currencyMatch = priceText.match(/^[^\d]+/);
-                const currency = currencyMatch ? currencyMatch[0].trim() : '$';
+                const currency = currencyMatch ? currencyMatch[0].trim() : '₹';
                 
                 addToCart({
                     title,
