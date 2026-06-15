@@ -530,16 +530,42 @@
 
         // Hero Promo Video Playlist
         document.addEventListener('DOMContentLoaded', function() {
-            const videoElement = document.getElementById('heroPromoVideo');
-            if (videoElement) {
-                const promos = ['assets/promo1.mp4', 'assets/promo2.mp4', 'assets/promo3.mp4', 'assets/promo4.mp4'];
+            const video1 = document.getElementById('heroPromoVideo');
+            if (video1) {
+                const promos = ['assets/promo1.mp4', 'assets/promo2.mp4', 'assets/promo3.mp4'];
                 let currentPromo = 0;
                 
-                videoElement.addEventListener('ended', function() {
+                // Set up crossfade styles
+                video1.style.transition = 'opacity 1.2s ease-in-out';
+                
+                // Create a second video element for seamless crossfading
+                const video2 = video1.cloneNode(true);
+                video2.id = 'heroPromoVideo2';
+                video2.style.opacity = '0';
+                video2.removeAttribute('autoplay');
+                video1.parentNode.insertBefore(video2, video1.nextSibling);
+                
+                let activeVideo = video1;
+                let nextVideo = video2;
+                
+                const playNext = function() {
                     currentPromo = (currentPromo + 1) % promos.length;
-                    videoElement.src = promos[currentPromo];
-                    videoElement.play().catch(e => console.log('Autoplay prevented:', e));
-                });
+                    nextVideo.src = promos[currentPromo];
+                    nextVideo.load();
+                    nextVideo.play().then(() => {
+                        // Crossfade
+                        nextVideo.style.opacity = '1';
+                        activeVideo.style.opacity = '0';
+                        
+                        // Swap active and next references
+                        let temp = activeVideo;
+                        activeVideo = nextVideo;
+                        nextVideo = temp;
+                    }).catch(e => console.log('Autoplay prevented:', e));
+                };
+                
+                video1.addEventListener('ended', playNext);
+                video2.addEventListener('ended', playNext);
             }
         });
     </script>

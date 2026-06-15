@@ -535,3 +535,77 @@ footer > .container:last-of-type {
     0% { left: -40%; }
     100% { left: 100%; }
 }
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+}
+
+.animate-on-scroll.is-visible {
+    animation: fadeInUpScroll 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes fadeInUpScroll {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-image.animate-on-scroll.is-visible,
+.about-hero-image.animate-on-scroll.is-visible {
+    animation-name: fadeInRightScroll;
+}
+
+.hero-content.animate-on-scroll.is-visible,
+.about-hero-content.animate-on-scroll.is-visible,
+.services-hero-content.animate-on-scroll.is-visible,
+.blog-hero-content.animate-on-scroll.is-visible,
+.contact-hero-content.animate-on-scroll.is-visible,
+.shop-hero-content.animate-on-scroll.is-visible {
+    animation-name: fadeInLeftScroll;
+}
+
+@keyframes fadeInRightScroll {
+    0% { opacity: 0; transform: translateX(40px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInLeftScroll {
+    0% { opacity: 0; transform: translateX(-40px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Stagger Delays for Grids */
+.categories-grid .category-card:nth-child(2).is-visible { animation-delay: 0.15s; }
+.categories-grid .category-card:nth-child(3).is-visible { animation-delay: 0.3s; }
+
+.products-grid .product-card:nth-child(2).is-visible { animation-delay: 0.15s; }
+.products-grid .product-card:nth-child(3).is-visible { animation-delay: 0.3s; }
+.products-grid .product-card:nth-child(4).is-visible { animation-delay: 0.45s; }
+
+.testimonials-grid .testimonial-card:nth-child(2).is-visible { animation-delay: 0.15s; }
+.testimonials-grid .testimonial-card:nth-child(3).is-visible { animation-delay: 0.3s; }
+
+.why-choose-grid .why-choose-card:nth-child(2).is-visible { animation-delay: 0.15s; }
+.why-choose-grid .why-choose-card:nth-child(3).is-visible { animation-delay: 0.3s; }
+.why-choose-grid .why-choose-card:nth-child(4).is-visible { animation-delay: 0.45s; }
+
+.special-offers .container .offer-card:nth-child(2).is-visible { animation-delay: 0.2s; }
+
+.team-grid .team-card:nth-child(2).is-visible { animation-delay: 0.15s; }
+.team-grid .team-card:nth-child(3).is-visible { animation-delay: 0.3s; }
+
+.services-grid .service-card:nth-child(2).is-visible { animation-delay: 0.15s; }
+.services-grid .service-card:nth-child(3).is-visible { animation-delay: 0.3s; }
+.services-grid .service-card:nth-child(4).is-visible { animation-delay: 0.45s; }
+
+.blog-posts .blog-card:nth-child(2).is-visible { animation-delay: 0.15s; }
+.blog-posts .blog-card:nth-child(3).is-visible { animation-delay: 0.3s; }
+
+.features-grid .feature-item:nth-child(2).is-visible { animation-delay: 0.15s; }
+.features-grid .feature-item:nth-child(3).is-visible { animation-delay: 0.3s; }

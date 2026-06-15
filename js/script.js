@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Scroll Animations
-    const animatedElements = document.querySelectorAll('.hero-content, .hero-image, .section-header, .category-card, .product-card, .banner-content, .testimonial-card, .why-choose-card, .offer-card, .newsletter-content');
+    const animatedElements = document.querySelectorAll('.hero-content, .hero-image, .section-header, .category-card, .product-card, .banner-content, .testimonial-card, .why-choose-card, .offer-card, .newsletter-content, .about-hero-content, .story-text, .story-image, .mission-card, .feature-item, .team-card, .sourcing-image, .sourcing-text, .achievement-stat, .services-hero-content, .service-card, .masterclass-text, .masterclass-image, .vip-content, .perk-item, .process-step, .blog-hero-content, .search-bar, .blog-tags, .blog-card, .video-overlay, .newsletter-text, .newsletter-form, .social-item, .footer-about, .footer-section, .footer-contact, .contact-hero-content, .contact-info-card, .contact-form, .map-container, .shop-hero-content, .filters-wrapper, .cart-item, .order-summary, .auth-left, .auth-right, .auth-header, .login-form, .stat-card, .recent-orders');
     
     if (animatedElements.length > 0) {
         const observer = new IntersectionObserver((entries) => {
@@ -32,8 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         animatedElements.forEach(el => {
             el.classList.add('animate-on-scroll');
-            observer.observe(el);
         });
+
+        const startObserving = () => {
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        };
+
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            setTimeout(startObserving, 2100);
+        } else {
+            startObserving();
+        }
     }
 
     // Mobile Menu Toggle
