@@ -23,7 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
     addBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            window.location.href = '404.html';
+            
+            // Show preloader before redirecting
+            const preloader = document.createElement('div');
+            preloader.id = 'preloader';
+            preloader.innerHTML = `
+                <div class="preloader-content">
+                    <img src="assets/product-01.webp" alt="Cosmetics" class="preloader-side-img left-img">
+                    <div class="preloader-center">
+                        <img src="assets/logo.webp" alt="Stackly Logo" class="preloader-logo">
+                        <div class="loader"></div>
+                    </div>
+                    <img src="assets/product-02.webp" alt="Cosmetics" class="preloader-side-img right-img">
+                </div>
+            `;
+            document.body.appendChild(preloader);
+            
+            setTimeout(() => {
+                window.location.href = '404.html';
+            }, 1500);
         });
     });
 });
