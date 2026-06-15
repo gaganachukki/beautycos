@@ -133,24 +133,52 @@
 
 .topbar-search {
     position: relative;
-    width: 300px;
+    width: 380px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.topbar-search input {
+.search-input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.search-input-wrapper input {
     width: 100%;
     padding: 10px 15px 10px 40px;
     border: 1px solid #e0e0e0;
     border-radius: 20px;
     outline: none;
     font-family: var(--font-sans);
+    box-sizing: border-box;
 }
 
-.topbar-search i {
+.search-input-wrapper i {
     position: absolute;
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--text-gray);
+}
+
+.topbar-search-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.topbar-search-btn:hover {
+    background-color: #a85461;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(203, 106, 120, 0.3);
 }
 
 .topbar-actions {

@@ -15,55 +15,6 @@ function updateCartBadge() {
     });
 }
 
-function addToCart(product) {
-    const existingItem = cartItems.find(item => item.title === product.title);
-    if (existingItem) {
-        existingItem.quantity += 1;
-    } else {
-        cartItems.push({ ...product, quantity: 1 });
-    }
-    saveCart();
-    showToast(`Added to cart!`);
-}
-
-function showToast(message) {
-    let toast = document.getElementById('cart-toast');
-    if (!toast) {
-        toast = document.createElement('div');
-        toast.id = 'cart-toast';
-        document.body.appendChild(toast);
-        
-        // Basic toast styles
-        toast.style.position = 'fixed';
-        toast.style.bottom = '30px';
-        toast.style.right = '30px';
-        toast.style.backgroundColor = 'var(--primary-color)';
-        toast.style.color = 'white';
-        toast.style.padding = '12px 25px';
-        toast.style.borderRadius = '30px';
-        toast.style.boxShadow = '0 5px 15px rgba(203,106,120,0.4)';
-        toast.style.zIndex = '9999';
-        toast.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-        toast.style.opacity = '0';
-        toast.style.transform = 'translateY(20px)';
-        toast.style.fontWeight = '500';
-    }
-    
-    toast.textContent = message;
-    
-    // Trigger reflow
-    void toast.offsetWidth;
-    
-    toast.style.opacity = '1';
-    toast.style.transform = 'translateY(0)';
-    
-    if (window.toastTimeout) clearTimeout(window.toastTimeout);
-    window.toastTimeout = setTimeout(() => {
-        toast.style.opacity = '0';
-        toast.style.transform = 'translateY(20px)';
-    }, 3000);
-}
-
 // Bind add-to-cart buttons
 document.addEventListener('DOMContentLoaded', () => {
     updateCartBadge();
@@ -71,41 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const addBtns = document.querySelectorAll('.add-to-cart-btn');
     addBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            // Find parent product card
-            const card = e.target.closest('.product-card');
-            if (card) {
-                const titleEl = card.querySelector('h3, .product-title');
-                const title = titleEl ? titleEl.textContent.trim() : 'Unknown Product';
-                
-                let priceText = '0.00';
-                const priceEl = card.querySelector('.product-price');
-                if (priceEl) {
-                    // Extract main price ignoring crossed-out old prices
-                    const clone = priceEl.cloneNode(true);
-                    const oldPrices = clone.querySelectorAll('.old-price, .original-price');
-                    oldPrices.forEach(el => el.remove());
-                    priceText = clone.textContent.trim();
-                }
-                
-                const imgEl = card.querySelector('img');
-                const imgSrc = imgEl ? imgEl.getAttribute('src') : '';
-                
-                // Parse price to number
-                const priceMatch = priceText.match(/[\d,.]+/);
-                const price = priceMatch ? parseFloat(priceMatch[0].replace(',', '')) : 0;
-                
-                // Get currency symbol
-                const currencyMatch = priceText.match(/^[^\d]+/);
-                const currency = currencyMatch ? currencyMatch[0].trim() : '₹';
-                
-                addToCart({
-                    title,
-                    price,
-                    image: imgSrc,
-                    formattedPrice: priceText,
-                    currency: currency
-                });
-            }
+            e.preventDefault();
+            window.location.href = '404.html';
         });
     });
 });
