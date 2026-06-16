@@ -7,6 +7,41 @@
     text-align: center;
 }
 
+.breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    animation: fadeInDown 0.6s ease;
+}
+
+.breadcrumb li {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    font-weight: 500;
+}
+
+.breadcrumb li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb li a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb li + li::before {
+    content: "›";
+    margin-right: 10px;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
 .contact-hero-content h1 {
     font-family: var(--font-serif);
     font-size: 48px;
